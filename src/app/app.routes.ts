@@ -13,5 +13,17 @@ export const routes: Routes = [
   {
     path: 'button',
     loadComponent: () => import('./button/button.page').then( m => m.ButtonPage)
+  },
+  {
+    path: 'icon',
+    loadComponent: () => import('./icon/icon.page').then( m => m.IconPage)
+  },
+  {
+    path: 'input',
+    loadComponent: () => import('./input/input.page').then( m => m.InputPage)
+  },
+  {
+    path: 'list',
+    loadComponent: () => import('./list/list.page').then( m => m.ListPage)
   }
 ];
