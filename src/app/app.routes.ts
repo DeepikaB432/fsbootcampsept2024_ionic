@@ -33,5 +33,9 @@ export const routes: Routes = [
   {
     path: 'alerts',
     loadComponent: () => import('./alerts/alerts.page').then( m => m.AlertsPage)
+  },
+  {
+    path: 'toast',
+    loadComponent: () => import('./toast/toast.page').then( m => m.ToastPage)
   }
 ];

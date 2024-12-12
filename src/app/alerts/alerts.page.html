@@ -30,4 +30,20 @@
 
   <ion-button (click)="alertControl()">Alert Controller Example</ion-button>
 
+  <ion-button id="advance_alert">Advance Alert</ion-button>
+  <ion-alert 
+  trigger="advance_alert"
+  header="Warning!!!"
+  message="Chances of a Storm"
+  [buttons]="advanceButton"
+  (didDismiss)="showResult($event)">
+  </ion-alert>
+
+  <ion-button id="inputButton">Input Button</ion-button>
+  <ion-alert 
+  trigger="inputButton"
+  [buttons]="saveButton"
+  [inputs]="inputArray">
+  </ion-alert>
+
 </ion-content>

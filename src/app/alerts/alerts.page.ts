@@ -15,6 +15,36 @@ export class AlertsPage implements OnInit {
   alertsButton = ['Confirm','Cancel','Later On'];
   clickalertsButton = ['Cancel'];
 
+  advanceButton = [
+    {
+      text : "Install",
+      role: "Install",
+      handler: ()=>{
+        console.log('Installing the latest ios version')
+      }
+    },
+    {
+      text : "Cancel",
+      role: "Cancel",
+      handler: ()=>{
+        console.log('Cancel button is clicked')
+      }
+    }
+  ]
+
+  saveButton = ['Save','Cancel']
+
+  inputArray =[
+    {
+      type:'text',
+      placeholder:'Name'
+    },
+    {
+      type:'Password',
+      placeholder:'Password'
+    }
+  ]
+
   alertOpen= false;
 
   alertController = inject(AlertController);
@@ -30,9 +60,14 @@ export class AlertsPage implements OnInit {
   async alertControl(){
     const alert = await this.alertController.create({
       header:"Testing the alter functionality",
+      message:"Testing",
       buttons:['Update Alert']
     });
     await alert.present();
+  }
+
+  showResult(event:any){
+    console.log(event)
   }
 
 }
