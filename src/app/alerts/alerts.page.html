@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alerts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alerts</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button id="ios_alert">IOS Update</ion-button>
+  <ion-alert 
+  trigger="ios_alert" header="IOS update available"
+  subHeader="A new ios version is available"
+  message="Please confirm to proceed.Otherwise we can do it overnight as well"
+  [buttons]="alertsButton">
+  </ion-alert>
+
+  <ion-button (click)="openModel(true)">isOpen Button Example</ion-button>
+  <ion-alert 
+  [isOpen]="alertOpen"
+  header="Open modal using click function"
+  subHeader="Click function"
+  [buttons]="clickalertsButton"
+  (didDismiss)="openModel(false)">
+  </ion-alert>
+
+  <ion-button (click)="alertControl()">Alert Controller Example</ion-button>
+
+</ion-content>
